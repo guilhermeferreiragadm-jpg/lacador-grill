@@ -76,8 +76,7 @@ const I18N = {
     "events.title": "Vai vir com o grupo todo?",
     "events.text": "Atendemos excursões, times, famílias grandes e confraternizações. Monte um cardápio fechado, combine o horário e deixe o resto com a gente.",
     "events.item1": "Cardápio fechado por pessoa",
-    "events.item2": "Encomendas de salgados e sobremesas",
-    "events.item3": "Atendimento para excursões e ônibus",
+    "events.item2": "Atendimento para excursões e ônibus",
     "events.cta": "Pedir orçamento no WhatsApp",
     "events.or": "ou ligue para",
 
@@ -182,8 +181,7 @@ const I18N = {
     "events.title": "Bringing the whole group?",
     "events.text": "We host tour groups, teams, big families and celebrations. Pick a set menu, tell us the time, and leave the rest to us.",
     "events.item1": "Set menu, priced per person",
-    "events.item2": "Catering orders of snacks and desserts",
-    "events.item3": "We welcome tour buses and excursions",
+    "events.item2": "We welcome tour buses and excursions",
     "events.cta": "Get a quote on WhatsApp",
     "events.or": "or call",
 
