@@ -38,9 +38,9 @@ const I18N = {
     "status.opensTomorrow": "Abre amanhã às {time}",
     "status.opensOn": "Abre {day} às {time}",
 
-    "hero.eyebrow": "Churrasco · Buffet por peso · Salgados",
+    "hero.eyebrow": "Buffet por peso",
     "hero.title": "O delicioso sabor do Brasil, em Orlando",
-    "hero.text": "Picanha na brasa, feijoada de panela e pão de queijo quentinho — servidos no Lake Buena Vista Factory Stores, a dez minutos da Disney.",
+    "hero.text": "Comida brasileira de verdade no Lake Buena Vista Factory Stores, a dez minutos da Disney.",
     "hero.cta1": "Ver cardápio",
     "hero.cta2": "Como chegar",
     "hero.stat1": "clientes por semana",
@@ -150,9 +150,9 @@ const I18N = {
     "status.opensTomorrow": "Opens tomorrow at {time}",
     "status.opensOn": "Opens {day} at {time}",
 
-    "hero.eyebrow": "Churrasco · Buffet by the pound · Snacks",
+    "hero.eyebrow": "Buffet by the pound",
     "hero.title": "The delicious taste of Brazil, right here in Orlando",
-    "hero.text": "Fire-grilled picanha, slow-cooked feijoada and warm cheese bread — served at Lake Buena Vista Factory Stores, ten minutes from Disney.",
+    "hero.text": "Real Brazilian food at Lake Buena Vista Factory Stores, ten minutes from Disney.",
     "hero.cta1": "See the menu",
     "hero.cta2": "Get directions",
     "hero.stat1": "guests a week",
