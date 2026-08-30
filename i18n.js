@@ -7,7 +7,7 @@
 const I18N = {
   pt: {
     "meta.title": "Laçador Grill | Comida brasileira em Orlando",
-    "meta.description": "Churrasco e comida caseira brasileira no Lake Buena Vista Factory Stores, em Orlando. Buffet por peso, salgados e sobremesas do Brasil.",
+    "meta.description": "Buffet brasileiro por peso no food court do Lake Buena Vista Factory Stores, em Orlando. Aberto todos os dias, das 11h30 às 16h, a dez minutos da Disney.",
 
     "nav.about": "Sobre",
     "nav.how": "Como funciona",
@@ -113,7 +113,7 @@ const I18N = {
 
   en: {
     "meta.title": "Laçador Grill | Authentic Brazilian Food in Orlando",
-    "meta.description": "Brazilian barbecue and home cooking at Lake Buena Vista Factory Stores in Orlando. Pay-by-weight buffet, snacks and desserts from Brazil.",
+    "meta.description": "Brazilian pay-by-weight buffet at the Lake Buena Vista Factory Stores food court in Orlando. Open daily 11:30 AM to 4 PM, ten minutes from Disney.",
 
     "nav.about": "About",
     "nav.how": "How it works",
