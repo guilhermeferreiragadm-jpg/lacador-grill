@@ -6,11 +6,10 @@
    - O número da rua aparece como 15657, 15711 e 15771 em fontes
      diferentes. Abaixo está o endereço oficial do Lake Buena Vista
      Factory Stores (15657). Confirmar o número da loja no food court.
-   - Os horários vieram de agregadores, não do perfil oficial.
+   - Horário e preço do buffet foram confirmados pelo restaurante.
    - Os PRATOS EXECUTIVOS são reais (fonte: DoorDash do restaurante).
      As demais categorias ainda são exemplos — substituir pelo balcão real.
-   - O DoorDash mostra um modelo de prato feito com preço fixo, não
-     buffet por peso. Confirmar se os dois coexistem.
+   - Prato executivo e buffet por peso coexistem: os dois estão no site.
    ============================================================= */
 
 const RESTAURANT = {
@@ -38,19 +37,25 @@ RESTAURANT.mapsEmbed =
   "https://maps.google.com/maps?q=" + encodeURIComponent(RESTAURANT.mapsQuery) + "&z=16&output=embed";
 
 /* Horário de funcionamento no fuso do restaurante (America/New_York).
+   CONFIRMADO pelo restaurante em 29/08/2026: todos os dias, 11h30 às 16h.
    day: 0 = domingo ... 6 = sábado. Minutos desde a meia-noite. */
-const HOURS = [
-  { day: 0, open: 11 * 60, close: 19 * 60 },
-  { day: 1, open: 10 * 60, close: 20 * 60 },
-  { day: 2, open: 10 * 60, close: 20 * 60 },
-  { day: 3, open: 10 * 60, close: 20 * 60 },
-  { day: 4, open: 10 * 60, close: 20 * 60 },
-  { day: 5, open: 10 * 60, close: 20 * 60 },
-  { day: 6, open: 10 * 60, close: 20 * 60 },
-];
+const HOURS = [0, 1, 2, 3, 4, 5, 6].map((day) => ({
+  day,
+  open: 11 * 60 + 30,
+  close: 16 * 60,
+}));
 
-/* Preço do buffet por peso — CONFIRMAR. */
-const BUFFET = { pricePerLb: 12.99 };
+/* Buffet por peso — preços CONFIRMADOS pelo restaurante em 29/08/2026.
+   A faixa do fim de semana também vale em feriados, e feriado não dá para
+   deduzir do dia da semana. Por isso o site mostra as duas faixas lado a
+   lado em vez de tentar adivinhar qual vale hoje: um preço errado na tela
+   é pior do que o cliente ler duas linhas. */
+const BUFFET = {
+  tiers: [
+    { pricePerLb: 15.99, pt: "Segunda a quinta", en: "Monday to Thursday" },
+    { pricePerLb: 16.99, pt: "Sexta a domingo e feriados", en: "Friday to Sunday and holidays" },
+  ],
+};
 
 const MENU_CATEGORIES = [
   { id: "executivos", pt: "Pratos executivos", en: "Executive Plates" },

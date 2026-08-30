@@ -67,9 +67,19 @@ function renderMenu() {
 }
 
 function renderBuffetPrice() {
-  const el = document.getElementById("buffetPrice");
-  if (!el) return;
-  el.textContent = money.format(BUFFET.pricePerLb);
+  const wrap = document.getElementById("buffetTiers");
+  if (!wrap) return;
+
+  wrap.innerHTML = BUFFET.tiers
+    .map(
+      (tier) => `
+      <div class="buffet-tier">
+        <span class="buffet-price">${money.format(tier.pricePerLb)}</span>
+        <span class="buffet-unit">${t("menu.buffetUnit")}</span>
+        <span class="buffet-when">${tier[currentLang]}</span>
+      </div>`
+    )
+    .join("");
 }
 
 /* Contadores do hero, animados quando entram na tela. */

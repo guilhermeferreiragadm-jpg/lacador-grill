@@ -352,19 +352,32 @@ h3 { font-size: 1.15rem; }
 
 .buffet-badge {
   display: inline-flex;
-  align-items: baseline;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 16px 26px;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 28px;
   border-radius: var(--radius);
   background: var(--smoke-950);
   color: var(--cream);
   margin-bottom: 34px;
   box-shadow: var(--shadow-md);
 }
-.buffet-label { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-300); }
-.buffet-price { font-family: var(--font-head); font-weight: 800; font-size: 1.9rem; color: var(--cream); }
+.buffet-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-300);
+}
+.buffet-tiers { display: flex; flex-wrap: wrap; gap: 12px 34px; }
+.buffet-tier { display: grid; grid-template-columns: auto auto; align-items: baseline; gap: 0 7px; }
+.buffet-price { font-family: var(--font-head); font-weight: 800; font-size: 1.75rem; color: var(--cream); }
 .buffet-unit { font-size: 0.85rem; opacity: 0.7; }
+.buffet-when {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--gold-300);
+  opacity: 0.9;
+  margin-top: 2px;
+}
 
 .filters { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 30px; }
 .filter-btn {
