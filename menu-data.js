@@ -3,9 +3,8 @@
    Este é o único arquivo que precisa ser editado no dia a dia.
 
    ATENÇÃO — CONFERIR COM O RESTAURANTE ANTES DE PUBLICAR:
-   - O número da rua aparece como 15657, 15711 e 15771 em fontes
-     diferentes. Abaixo está o endereço oficial do Lake Buena Vista
-     Factory Stores (15657). Confirmar o número da loja no food court.
+   - Endereço confirmado pelo restaurante em 29/08/2026: 15771. As fontes
+     públicas divergiam entre 15657, 15711 e 15771.
    - Horário e preço do buffet foram confirmados pelo restaurante.
    - O restaurante passou a trabalhar SÓ por peso (confirmado em 29/08/2026).
      A listagem de pratos saiu do site; sobraram as duas faixas de preço.
@@ -20,7 +19,7 @@ const RESTAURANT = {
   facebook: "https://www.facebook.com/lacadorgrill/",
   timeZone: "America/New_York",
   address: {
-    street: "15657 S Apopka Vineland Rd (SR 535)",
+    street: "15771 S Apopka Vineland Rd (SR 535)",
     detail: "Lake Buena Vista Factory Stores — Food Court",
     city: "Orlando",
     region: "FL",
@@ -29,7 +28,7 @@ const RESTAURANT = {
   },
 };
 
-RESTAURANT.mapsQuery = "Lacador Grill, 15657 S Apopka Vineland Rd, Orlando, FL 32821";
+RESTAURANT.mapsQuery = "Lacador Grill, 15771 S Apopka Vineland Rd, Orlando, FL 32821";
 RESTAURANT.mapsUrl =
   "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(RESTAURANT.mapsQuery);
 RESTAURANT.mapsEmbed =
