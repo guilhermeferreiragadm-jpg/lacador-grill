@@ -153,6 +153,7 @@ h3 { font-size: 1.15rem; }
   font-size: 1.12rem;
   color: var(--cream);
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 .logo-text span { color: var(--gold-500); }
 
@@ -197,6 +198,21 @@ h3 { font-size: 1.15rem; }
 }
 .lang-switch button:hover { color: var(--cream); }
 .lang-switch button.active { background: var(--gold-500); color: var(--smoke-950); }
+
+/* Ícone do Instagram no cabeçalho: pequeno o bastante para ficar visível
+   também no mobile, onde o botão de WhatsApp some. */
+.icon-link {
+  display: grid;
+  place-items: center;
+  width: 38px; height: 38px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid rgba(251, 246, 238, 0.28);
+  color: rgba(251, 246, 238, 0.85);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.icon-link svg { width: 20px; height: 20px; }
+.icon-link:hover { color: var(--gold-500); border-color: var(--gold-500); transform: translateY(-1px); }
 
 .btn-header { padding: 10px 20px; font-size: 0.85rem; }
 
@@ -461,6 +477,34 @@ h3 { font-size: 1.15rem; }
 .shot-tall { grid-row: span 2; }
 .gallery-credit { margin-top: 20px; font-size: 0.84rem; color: var(--muted); font-style: italic; }
 
+/* ---------- INSTAGRAM ---------- */
+/* Mesmo componente da faixa do GLA Veículos, para os sites conversarem. */
+.instagram-cta {
+  background: linear-gradient(120deg, #405de6, #833ab4, #e1306c, #fd1d1d, #fcaf45);
+  padding: 48px 0;
+}
+.instagram-cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  color: var(--white);
+}
+.instagram-icon {
+  display: grid;
+  place-items: center;
+  width: 56px; height: 56px;
+  flex: none;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.instagram-icon svg { width: 30px; height: 30px; }
+.instagram-cta-text { flex: 1; min-width: 240px; }
+.instagram-cta-text h3 { color: var(--white); font-size: 1.2rem; margin-bottom: 4px; }
+.instagram-cta-text p { color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; }
+.btn-instagram { border-color: rgba(255, 255, 255, 0.7); color: var(--white); }
+.btn-instagram:hover { background: rgba(255, 255, 255, 0.18); }
+
 /* ---------- EVENTOS ---------- */
 .events { padding: 100px 0; background: var(--cream); }
 .events-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
@@ -623,7 +667,8 @@ h3 { font-size: 1.15rem; }
 
 @media (max-width: 1000px) {
   .nav-toggle { display: flex; margin-left: auto; order: 3; }
-  .lang-switch { order: 2; margin-left: auto; }
+  .icon-link { order: 1; margin-left: auto; }
+  .lang-switch { order: 2; }
   .btn-header { display: none; }
 
   .nav {
@@ -660,6 +705,11 @@ h3 { font-size: 1.15rem; }
   .menu-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .btn-instagram { width: 100%; }
+  /* Em telas estreitas o ícone do Instagram no cabeçalho espremia o nome
+     até quebrar em duas linhas. A faixa em gradiente e o rodapé já levam
+     para o perfil, então aqui ele sai. */
+  .icon-link { display: none; }
   .cookie-banner { left: 14px; right: 14px; bottom: 90px; max-width: none; flex-direction: column; align-items: flex-start; }
   .wa-float { right: 16px; bottom: 16px; }
   .events-actions { flex-direction: column; align-items: flex-start; }

@@ -14,12 +14,17 @@ const I18N = {
     "nav.events": "Eventos",
     "nav.visit": "Onde estamos",
     "nav.whatsapp": "WhatsApp",
+    "nav.instagram": "Siga no Instagram",
     "nav.gallery": "Galeria",
 
     "gallery.eyebrow": "O lugar",
     "gallery.title": "É assim que é comer no Laçador",
     "gallery.text": "Balcão montado o dia inteiro, carne saindo da brasa e salão cheio. Sem filtro, sem foto de banco de imagem.",
     "gallery.credit": "Fotos do Instagram do restaurante.",
+
+    "instagram.title": "Acompanhe o dia a dia no Instagram",
+    "instagram.text": "@lacadorgrill · o que está saindo do balcão, todo dia, em fotos e vídeos",
+    "instagram.cta": "Seguir no Instagram",
 
     "alt.balcao": "Balcão do buffet do Laçador Grill com saladas e pratos quentes",
     "alt.salao": "Salão do Laçador Grill cheio de clientes durante um evento",
@@ -115,12 +120,18 @@ const I18N = {
     "nav.how": "How it works",
     "nav.events": "Groups",
     "nav.visit": "Find us",
+    "nav.whatsapp": "WhatsApp",
+    "nav.instagram": "Follow on Instagram",
     "nav.gallery": "Gallery",
 
     "gallery.eyebrow": "The place",
     "gallery.title": "This is what eating at Laçador looks like",
     "gallery.text": "A counter that stays full all day, meat coming off the grill, and a packed dining room. No filters, no stock photos.",
     "gallery.credit": "Photos from the restaurant's Instagram.",
+
+    "instagram.title": "Follow the daily action on Instagram",
+    "instagram.text": "@lacadorgrill · what's coming off the counter, every day, in photos and videos",
+    "instagram.cta": "Follow on Instagram",
 
     "alt.balcao": "The Laçador Grill buffet counter with salads and hot dishes",
     "alt.salao": "The Laçador Grill dining room full of guests during an event",
