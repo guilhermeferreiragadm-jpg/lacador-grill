@@ -43,9 +43,9 @@ const I18N = {
     "hero.text": "Comida brasileira de verdade no Lake Buena Vista Factory Stores, a dez minutos da Disney.",
     "hero.cta1": "Ver cardápio",
     "hero.cta2": "Como chegar",
+    "hero.stat1prefix": "mais de",
     "hero.stat1": "clientes por semana",
     "hero.stat2": "brasileiro de verdade",
-    "hero.stat3": "min da Disney Springs",
 
     "about.eyebrow": "Quem somos",
     "about.title": "Comida de casa, feita como no Brasil",
@@ -153,9 +153,9 @@ const I18N = {
     "hero.text": "Real Brazilian food at Lake Buena Vista Factory Stores, ten minutes from Disney.",
     "hero.cta1": "See the menu",
     "hero.cta2": "Get directions",
+    "hero.stat1prefix": "more than",
     "hero.stat1": "guests a week",
     "hero.stat2": "authentically Brazilian",
-    "hero.stat3": "min from Disney Springs",
 
     "about.eyebrow": "Who we are",
     "about.title": "Home cooking, exactly the way Brazil makes it",

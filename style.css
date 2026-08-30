@@ -286,6 +286,14 @@ h3 { font-size: 1.15rem; }
   border-top: 1px solid rgba(251, 246, 238, 0.16);
 }
 .stat-value { display: flex; align-items: baseline; }
+/* "mais de" fica menor e antes do número, sem competir com ele. */
+.stat-prefix {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: rgba(251, 246, 238, 0.7);
+  margin-right: 6px;
+}
 .stat-num, .stat-suffix {
   font-family: var(--font-head);
   font-weight: 800;
