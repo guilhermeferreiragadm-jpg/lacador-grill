@@ -1,72 +1,13 @@
 /* =============================================================
-   Cardápio: filtro por categoria e renderização bilíngue.
+   Faixas de preço do buffet e contadores do hero.
    ============================================================= */
 
-let activeCategory = "todos";
-
 /* Sempre en-US: o preço é o mesmo que está na etiqueta do balcão em
-   Orlando. Em pt-BR o Intl formataria "US$ 12,99", que confunde. */
+   Orlando. Em pt-BR o Intl formataria "US$ 15,99", que confunde. */
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 
-function renderCategoryFilters() {
-  const wrap = document.getElementById("menuFilters");
-  if (!wrap) return;
-
-  const buttons = [{ id: "todos", label: t("menu.all") }].concat(
-    MENU_CATEGORIES.map((c) => ({ id: c.id, label: c[currentLang] }))
-  );
-
-  wrap.innerHTML = buttons
-    .map(
-      (b) =>
-        `<button type="button" class="filter-btn${b.id === activeCategory ? " active" : ""}" data-filter="${b.id}">${b.label}</button>`
-    )
-    .join("");
-
-  wrap.querySelectorAll(".filter-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      activeCategory = btn.dataset.filter;
-      wrap.querySelectorAll(".filter-btn").forEach((b) => b.classList.toggle("active", b === btn));
-      renderMenu();
-    });
-  });
-}
-
-function renderMenu() {
-  const grid = document.getElementById("menuGrid");
-  if (!grid) return;
-
-  const list = activeCategory === "todos" ? MENU : MENU.filter((i) => i.cat === activeCategory);
-
-  if (!list.length) {
-    grid.innerHTML = `<p class="menu-empty">${t("menu.empty")}</p>`;
-    return;
-  }
-
-  grid.innerHTML = list
-    .map((item) => {
-      const copy = item[currentLang];
-      const category = MENU_CATEGORIES.find((c) => c.id === item.cat);
-      const price =
-        item.price == null
-          ? `<span class="menu-weight">${t("menu.byWeight")}</span>`
-          : `<span class="menu-price">${money.format(item.price)}</span>`;
-
-      return `
-      <article class="menu-card reveal visible${item.highlight ? " is-highlight" : ""}">
-        ${item.highlight ? `<span class="menu-flag">${t("menu.favorite")}</span>` : ""}
-        <div class="menu-card-head">
-          <h3>${copy.name}</h3>
-          ${price}
-        </div>
-        <p>${copy.desc}</p>
-        <span class="menu-cat">${category ? category[currentLang] : ""}</span>
-      </article>`;
-    })
-    .join("");
-}
-
 function renderBuffetPrice() {
+
   const wrap = document.getElementById("buffetTiers");
   if (!wrap) return;
 
@@ -130,8 +71,6 @@ function setupCounters() {
 }
 
 function refreshMenuUI() {
-  renderCategoryFilters();
-  renderMenu();
   renderBuffetPrice();
 }
 
